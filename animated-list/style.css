@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --main-bg-color: #2C3333;
+    --main-text-color: #2E4F4F;
+    --text-color: #fff;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--main-bg-color);
+}
+
+.animated-btn {
+    cursor: pointer;
+}
+
+.animated-btn div {
+    width: 24px;
+    height: 4px;
+    background: var(--text-color);
+    margin-top: 3px;
+    transition: all .5s ease;
+}
+
+.active .bar-1 {
+    transform: rotate(45deg) translate(0px, 10px);
+}
+
+.active .bar-2 {
+    opacity: 0;
+}
+
+.active .bar-3 {
+    transform: rotate(-45deg) translate(0px, -10px);
+}
